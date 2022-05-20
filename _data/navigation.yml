@@ -1,10 +1,4 @@
-- name: Home
+- name: Blog
   link: /
 - name: About
   link: /about.html
-- name: Dormant
-  link: /dormant.html
-- name: Blog
-  link: /blog.html
-- name: Staff
-  link: /staff.html

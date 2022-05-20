@@ -6,9 +6,29 @@
     <link rel="stylesheet" href="/assets/css/styles.css">
     {% feed_meta %}
     {% seo %}
+    <!-- <script src="/assets/js/script.js"></script> -->
   </head>
   <body>
-    {% include navigation.html %}
-    {{ content }}
+    <!-- {% include navigation.html %} -->
+    <header class="def-header">
+      <div class="centering">
+        <div class="big-name">
+          &lt{{ page.title | upcase | split: " " | first }}&gt
+        </div>
+      </div>
+    </header>
+
+    <section class="def-content">
+      <div id="content-box" class="centering">
+        {{ content }}
+      </div>
+    </section>
+
+    <footer class="def-footer">
+      <div class="centering">
+        <div class="big-name">&lt/{{ page.title | upcase | split: " " | first }}&gt</div>
+        <!-- <div class="social-logos"></div> -->
+      </div>
+    </footer>
   </body>
 </html>
