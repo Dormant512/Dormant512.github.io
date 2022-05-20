@@ -1,6 +1,9 @@
-collections:
-  authors:
-    output: true
+# collections:
+#   authors:
+#     output: true
+
+baseurl: /
+url: http://Dormant512.github.io
 
 defaults:
   - scope:
