@@ -1,3 +1,4 @@
+
 function resizeContent() {
     let emFrameWidth = window.innerWidth / 16;
     // let emCardWidth = document.getElementsByClassName("post-card")[0] / 16;
@@ -19,3 +20,4 @@ function resizeContent() {
 
     // console.log(`${emFrameWidth} into ${res}`);
 }
+

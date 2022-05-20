@@ -8,11 +8,6 @@ url: http://Dormant512.github.io
 defaults:
   - scope:
       path: ""
-      type: "authors"
-    values:
-      layout: "author"
-  - scope:
-      path: ""
       type: "posts"
     values:
       layout: "post"

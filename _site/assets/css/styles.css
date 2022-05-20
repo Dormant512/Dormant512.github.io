@@ -3,6 +3,16 @@ body {
   box-sizing: border-box;
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: black;
 }
 
 .def-header,
@@ -30,7 +40,7 @@ body {
 .big-name {
   width: 30rem;
   color: white;
-  font-size: 5rem;
+  font-size: 80px;
   font-style: italic;
   font-weight: bold;
   line-height: 10rem;
@@ -65,15 +75,35 @@ body {
 
 .post-card {
   /* outline: 1px solid black; */
-  padding: .5rem;
+  position: relative;
+  padding: 0 1rem;
+  text-align: right;
   height: 20rem;
-  background-color: aqua;
+  background-color: antiquewhite;
 }
 
 .def-content h1.main-title {
-  font-size: 3rem;
+  font-size: 60px;
 }
 
 .def-content h2 {
-  font-size: 2rem;
+  font-size: 40px;
 }
+
+.post-card .bottom-line {
+  position: absolute;
+  width: 90%;
+  bottom: 1rem;
+}
+
+.briefly {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 20px;
+  font-weight: normal;
+  font-style: italic;
+}
+
+.post-card hr {
+  border: 1px solid black;
+}
+

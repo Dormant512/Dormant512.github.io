@@ -6,14 +6,14 @@
     <link rel="stylesheet" href="/assets/css/styles.css">
     {% feed_meta %}
     {% seo %}
-    <!-- <script src="/assets/js/script.js"></script> -->
+    <script src="/assets/js/script.js"></script>
   </head>
   <body>
     <!-- {% include navigation.html %} -->
     <header class="def-header">
       <div class="centering">
         <div class="big-name">
-          &lt{{ page.title | upcase | split: " " | first }}&gt
+          &lt{{ page.title | upcase }}&gt
         </div>
       </div>
     </header>
@@ -26,7 +26,7 @@
 
     <footer class="def-footer">
       <div class="centering">
-        <div class="big-name">&lt/{{ page.title | upcase | split: " " | first }}&gt</div>
+        <div class="big-name">&lt/{{ page.title | upcase }}&gt</div>
         <!-- <div class="social-logos"></div> -->
       </div>
     </footer>
