@@ -21,3 +21,16 @@ function resizeContent() {
     // console.log(`${emFrameWidth} into ${res}`);
 }
 
+function toggleMobileMenu() {
+    let checkBox = document.getElementById("mob-menu");
+    let menu = document.getElementById("menu-to-show");
+    let content = document.getElementById("content-to-show");
+
+    if (checkBox.checked) {
+        menu.style.display = "block";
+        content.style.display = "none";
+    } else {
+        menu.style.display = "none";
+        content.style.display = "block";
+    }
+}

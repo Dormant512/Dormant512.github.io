@@ -2,23 +2,44 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }}</title>
     <link rel="stylesheet" href="/assets/css/styles.css">
     {% feed_meta %}
     {% seo %}
-    <script src="/assets/js/script.js"></script>
   </head>
   <body>
-    <!-- {% include navigation.html %} -->
     <header class="def-header">
+      <input class="mobile-menu" type="checkbox" name="mobile-menu-is-checked" id="mob-menu" onclick="toggleMobileMenu();">
+      <label for="mob-menu"></label>
+
       <div class="centering">
         <div class="big-name">
-          &lt{{ page.title | upcase }}&gt
+          {% if page.date %}
+            ~{{ page.date | date: "%d.%m.%Y" }}~
+          {% else %}
+            ~{{ page.title | upcase }}~
+          {% endif %}
+        </div>
+        <div class="navigation">
+          <ul>
+            <li><a href="{{ site.url }}/index.html">~home~</a></li>
+            <li><a href="{{ site.url }}/about.html">~about~</a></li>
+          </ul>
         </div>
       </div>
     </header>
 
-    <section class="def-content">
+    <section id="menu-to-show" class="mobile-menu-contents" style="display: none;">
+      <div class="navigation">
+        <ul>
+          <li><a href="{{ site.url }}/index.html">~home~</a></li>
+          <li><a href="{{ site.url }}/about.html">~about~</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="content-to-show" class="def-content">
       <div id="content-box" class="centering">
         {{ content }}
       </div>
@@ -26,9 +47,16 @@
 
     <footer class="def-footer">
       <div class="centering">
-        <div class="big-name">&lt/{{ page.title | upcase }}&gt</div>
+        <div class="big-name">
+          {% if page.date %}
+            ~{{ page.date | date: "%d.%m.%Y" }}~
+          {% else %}
+            ~{{ page.title | upcase }}~
+          {% endif %}
+        </div>
         <!-- <div class="social-logos"></div> -->
       </div>
     </footer>
+    <script src="/assets/js/script.js"></script>
   </body>
 </html>
