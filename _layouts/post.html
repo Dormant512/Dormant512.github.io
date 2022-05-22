@@ -16,10 +16,10 @@ layout: default
 
 <div class="post-nav">
   {% if page.previous.url %}
-    <a class="post-prev" id="post-prev" href="{{ page.previous.url }}"><img src="{{ site.baseurl }}assets/images/menu_prev.svg"><span>ctrl&#8592;</span></a>
+    <a class="post-prev" id="post-prev" href="{{ page.previous.url }}"><span class="arrow">&lt;--</span><br><span>ctrl&#8592;</span></a>
   {% endif %}
   
   {% if page.next.url %}
-    <a class="post-next" id="post-next" href="{{ page.next.url }}"><img src="{{ site.baseurl }}assets/images/menu_next.svg"><span>ctrl&#8594;</span></a>
+    <a class="post-next" id="post-next" href="{{ page.next.url }}"><span class="arrow">--&gt;</span><br><span>ctrl&#8594;</span></a>
   {% endif %}
 </div>

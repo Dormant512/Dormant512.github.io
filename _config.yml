@@ -21,3 +21,7 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
+  - jekyll-paginate
+
+paginate: 12
+paginate_path: "/page:num/"

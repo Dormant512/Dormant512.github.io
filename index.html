@@ -2,10 +2,10 @@
 title: Blog
 ---
 
-<h1 class="main-title">Последние статьи</h1>
+<h1 class="main-title">Recent articles</h1>
 
 <div class="post-container">
-  {% for post in site.posts %}
+  {% for post in paginator.posts %}
     <a class="post-card {{ post.theme }}" href="{{ post.url }}" style="background: antiquewhite url('{{ site.baseurl }}assets/images/{{ post.image }}'); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%;">
       <h2>{{ post.title }}</h2>
       <div class="bottom-line">
@@ -16,3 +16,31 @@ title: Blog
     </a>
   {% endfor %}
 </div>
+
+{% if paginator.total_pages > 1 %}
+  <div class="centering">
+    <div class="pagination">
+      {% if paginator.previous_page %}
+        <a href="{{ paginator.previous_page_path | relative_url }}">&lt;--</a>
+      {% else %}
+        <span class="disabled">&lt;--</span>
+      {% endif %}
+  
+      {% for page in (1..paginator.total_pages) %}
+        {% if page == paginator.page %}
+          <span class="current-paginator-page">{{ page }}</span>
+        {% elsif page == 1 %}
+          <a href="{{ '/' | relative_url }}">{{ page }}</a>
+        {% else %}
+          <a href="{{ site.paginate_path | relative_url | replace: ':num', page }}">{{ page }}</a>
+        {% endif %}
+      {% endfor %}
+  
+      {% if paginator.next_page %}
+        <a href="{{ paginator.next_page_path | relative_url }}">--&gt;</a>
+      {% else %}
+        <span class="disabled">--&gt;</span>
+      {% endif %}
+    </div>
+  </div>
+{% endif %}

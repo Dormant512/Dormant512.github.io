@@ -1,7 +1,8 @@
 ---
-about: Первый пост для тестировки заглавий
+about: First post to test titles, this post is about green teas
 image: header.png
 theme: dark
+i18n-link: green
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vel fringilla est ullamcorper eget nulla facilisi etiam. Consequat semper viverra nam libero. Fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate sapien nec. Ipsum nunc aliquet bibendum enim facilisis gravida neque. Ut placerat orci nulla pellentesque. Quis varius quam quisque id diam vel quam. Convallis tellus id interdum velit. Mattis molestie a iaculis at. Eget gravida cum sociis natoque penatibus. Elementum eu facilisis sed odio morbi quis commodo odio aenean. Euismod quis viverra nibh cras pulvinar mattis nunc sed blandit. Egestas dui id ornare arcu odio ut sem nulla. Porttitor rhoncus dolor purus non enim praesent elementum facilisis leo. Eget arcu dictum varius duis. Tincidunt lobortis feugiat vivamus at augue eget arcu. Ultrices gravida dictum fusce ut placerat orci nulla pellentesque. Rhoncus dolor purus non enim praesent elementum.

@@ -188,6 +188,11 @@ a:hover {
   position: fixed;
   top: 50%;
   opacity: 0.15;
+  text-align: center;
+}
+
+.post-nav .arrow {
+  font-size: 2rem;
 }
 
 .post-nav .post-prev {
@@ -196,6 +201,21 @@ a:hover {
 
 .post-nav .post-next {
   right: 1.2rem;
+}
+
+.pagination {
+  margin: 1rem auto;
+  /* outline: 1px solid red; */
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.pagination .current-paginator-page {
+  color: lightsalmon;
+}
+
+.disabled {
+  opacity: 0.4;
 }
 
 @media screen and (max-width: 768px) {
@@ -267,7 +287,7 @@ a:hover {
     color: rgba(0, 0, 0, 0.5);
   }
 
-  .post-nav span {
+  .post-nav span:last-child {
     display: none;
   }
 

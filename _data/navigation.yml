@@ -1,4 +1,4 @@
-- name: Blog
-  link: /
-- name: About
+- name: about
   link: /about.html
+- name: vk
+  link: "https://vk.com/dormant_art"
