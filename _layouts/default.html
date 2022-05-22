@@ -21,22 +21,12 @@
             ~{{ page.title | upcase }}~
           {% endif %}
         </div>
-        <div class="navigation">
-          <ul>
-            <li><a href="{{ site.url }}/index.html">~home~</a></li>
-            <li><a href="{{ site.url }}/about.html">~about~</a></li>
-          </ul>
-        </div>
+        {% include navigation.html %}
       </div>
     </header>
 
     <section id="menu-to-show" class="mobile-menu-contents" style="display: none;">
-      <div class="navigation">
-        <ul>
-          <li><a href="{{ site.url }}/index.html">~home~</a></li>
-          <li><a href="{{ site.url }}/about.html">~about~</a></li>
-        </ul>
-      </div>
+      {% include navigation.html %}
     </section>
 
     <section id="content-to-show" class="def-content">

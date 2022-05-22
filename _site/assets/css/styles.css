@@ -23,6 +23,11 @@ a:hover {
   height: 6rem;
   vertical-align: top;
   z-index: 10;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.navigation {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .def-header {
@@ -176,6 +181,23 @@ a:hover {
   max-width: 100%;
 }
 
+.post-nav a {
+  display: block;
+  width: 3rem;
+  height: 3rem;
+  position: fixed;
+  top: 50%;
+  opacity: 0.15;
+}
+
+.post-nav .post-prev {
+  left: 1.2rem;
+}
+
+.post-nav .post-next {
+  right: 1.2rem;
+}
+
 @media screen and (max-width: 768px) {
   .post-container {
     display: grid;
@@ -243,5 +265,22 @@ a:hover {
 
   .mobile-menu-contents a {
     color: rgba(0, 0, 0, 0.5);
+  }
+
+  .post-nav span {
+    display: none;
+  }
+
+  .post-nav a {
+    top: 18%;
+    opacity: 0.1;
+  }
+
+  .post-nav .post-prev {
+    left: 0.5rem;
+  }
+  
+  .post-nav .post-next {
+    right: 0.5rem;
   }
 }

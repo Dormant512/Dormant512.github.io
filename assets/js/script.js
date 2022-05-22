@@ -34,3 +34,13 @@ function toggleMobileMenu() {
         content.style.display = "block";
     }
 }
+
+document.addEventListener("keydown", function(event) {
+    if (document.getElementById("post-prev") && event.ctrlKey && event.key == "ArrowLeft") {
+        document.getElementById("post-prev").click();
+    }
+
+    if (document.getElementById("post-next") && event.ctrlKey && event.key == "ArrowRight") {
+        document.getElementById("post-next").click();
+    }
+});
