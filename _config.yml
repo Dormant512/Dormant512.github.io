@@ -2,7 +2,6 @@
 #   authors:
 #     output: true
 
-baseurl: /
 url: http://Dormant512.github.io
 
 defaults:
@@ -16,12 +15,38 @@ defaults:
       path: ""
     values:
       layout: "default"
+      lang: en
+      base-url: "/"
+  - scope:
+      path: "ru"
+    values:
+      lang: ru
+      base-url: "/ru/"
+  - scope:
+      path: "de"
+    values:
+      lang: de
+      base-url: "/de/"
       
 plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
   - jekyll-paginate
+  - jekyll-paginate-multiple
 
-paginate: 12
-paginate_path: "/page:num/"
+include: [ru]
+include: [de]
+
+paginate_multiple:
+  - paginate: 12
+    paginate_path: '/page:num/'
+    sub_dir: '/en'
+  - paginate: 12
+    paginate_path: '/ru/page:num/'
+    sub_dir: '/ru'
+  - paginate: 12
+    paginate_path: '/de/page:num/'
+    sub_dir: '/de'
+
+# paginate_path: "/page:num/"

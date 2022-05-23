@@ -78,7 +78,7 @@ a:hover {
 
 .def-header .navigation li {
   display: inline;
-  margin-right: 3rem;
+  margin-right: 1.5rem;
 }
 
 .def-header .navigation li a {
@@ -95,6 +95,26 @@ a:hover {
   width: 60%;
   height: 10rem;
 } */
+
+.def-header .language-selector {
+  position: fixed;
+  top: 1.3rem;
+  right: 1%;
+  display: block;
+  /* width: 3rem; */
+}
+
+.def-header .language-selector ul {
+  list-style: none;
+}
+
+.def-header .language-selector li {
+  display: inline;
+}
+
+.def-header .language-selector a {
+  color: white;
+}
 
 .def-content {
   position: relative;
@@ -218,25 +238,24 @@ a:hover {
   opacity: 0.4;
 }
 
-@media screen and (max-width: 768px) {
-  .post-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-auto-rows: auto;
-    grid-gap: 2rem;
-    margin: 0 auto;
-  }
-  
-  .centering {
-    width: 65%;
+@media screen and (max-width: 1150px) {
+  .def-header .language-selector {
+    top: -0.4rem;
+    right: 5%;
+    display: block;
+    /* width: 3rem; */
   }
 
-  .big-name {
-    position: relative;
-    left: 2.5rem;
-    font-size: 2.5rem;
+  .def-header .language-selector li {
+    display: block;
   }
 
+  .def-header .language-selector .slash {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1110px) {
   .def-header .navigation {
     display: none;
   }
@@ -302,5 +321,48 @@ a:hover {
   
   .post-nav .post-next {
     right: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .post-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    grid-gap: 2rem;
+    margin: 0 auto;
+  }
+  
+  .centering {
+    width: 65%;
+  }
+
+  .big-name {
+    position: relative;
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .big-name {
+    position: relative;
+    left: 2rem;
+    font-size: 1.8rem;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  .big-name {
+    position: relative;
+    left: 2rem;
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 290px) {
+  .big-name {
+    position: relative;
+    left: 1.2rem;
+    font-size: 1.2rem;
   }
 }

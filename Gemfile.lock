@@ -32,6 +32,9 @@ GEM
     jekyll-feed (0.16.0)
       jekyll (>= 3.7, < 5.0)
     jekyll-paginate (1.1.0)
+    jekyll-paginate-multiple (0.1.0)
+      jekyll (>= 2.5)
+      jekyll-paginate (~> 1.1)
     jekyll-sass-converter (2.2.0)
       sassc (> 2.0.1, < 3.0)
     jekyll-seo-tag (2.8.0)
@@ -72,6 +75,7 @@ DEPENDENCIES
   jekyll (~> 4.2)
   jekyll-feed
   jekyll-paginate
+  jekyll-paginate-multiple
   jekyll-seo-tag
   jekyll-sitemap
   webrick (~> 1.7)

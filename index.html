@@ -5,15 +5,17 @@ title: Blog
 <h1 class="main-title">Recent articles</h1>
 
 <div class="post-container">
-  {% for post in paginator.posts %}
-    <a class="post-card {{ post.theme }}" href="{{ post.url }}" style="background: antiquewhite url('{{ site.baseurl }}assets/images/{{ post.image }}'); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%;">
-      <h2>{{ post.title }}</h2>
-      <div class="bottom-line">
-        <span class="briefly">{{ post.about | truncate:100 }}</span>
-        <hr>
-        <span class="briefly">{{ post.date | date: "%d.%m.%Y" }}</span>
-      </div>
-    </a>
+  {% for post in paginator.posts limit:12 %}
+    {% if post.categories contains "en" %}
+      <a class="post-card {{ post.theme }}" href="{{ post.url }}" style="background: antiquewhite url('/assets/images/{{ post.image }}'); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%;">
+        <h2>{{ post.title }}</h2>
+        <div class="bottom-line">
+          <span class="briefly">{{ post.about | truncate:100 }}</span>
+          <hr>
+          <span class="briefly">{{ post.date | date: "%d.%m.%Y" }}</span>
+        </div>
+      </a>
+    {% endif %}
   {% endfor %}
 </div>
 

@@ -1,0 +1,48 @@
+---
+title: Блог
+---
+
+<h1 class="main-title">Последние статьи</h1>
+
+<div class="post-container">
+  {% for post in paginator.posts limit:12 %}
+    {% if post.categories contains "ru" %}
+      <a class="post-card {{ post.theme }}" href="{{ post.url }}" style="background: antiquewhite url('/assets/images/{{ post.image }}'); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%;">
+        <h2>{{ post.title }}</h2>
+        <div class="bottom-line">
+          <span class="briefly">{{ post.about | truncate:100 }}</span>
+          <hr>
+          <span class="briefly">{{ post.date | date: "%d.%m.%Y" }}</span>
+        </div>
+      </a>
+    {% endif %}
+  {% endfor %}
+</div>
+
+{% if paginator.total_pages > 1 %}
+  <div class="centering">
+    <div class="pagination">
+      {% if paginator.previous_page %}
+        <a href="{{ paginator.previous_page_path | relative_url }}">&lt;--</a>
+      {% else %}
+        <span class="disabled">&lt;--</span>
+      {% endif %}
+  
+      {% for page in (1..paginator.total_pages) %}
+        {% if page == paginator.page %}
+          <span class="current-paginator-page">{{ page }}</span>
+        {% elsif page == 1 %}
+          <a href="/ru/">{{ page }}</a>
+        {% else %}
+          <a href="/ru/{{ site.paginate_path | relative_url | replace: ':num', page }}">{{ page }}</a>
+        {% endif %}
+      {% endfor %}
+  
+      {% if paginator.next_page %}
+        <a href="{{ paginator.next_page_path | relative_url }}">--&gt;</a>
+      {% else %}
+        <span class="disabled">--&gt;</span>
+      {% endif %}
+    </div>
+  </div>
+{% endif %}

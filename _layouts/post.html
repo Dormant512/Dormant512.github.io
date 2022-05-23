@@ -1,5 +1,6 @@
 ---
 layout: default
+category: page.lang
 ---
 
 <h1>{{ page.title }}</h1>
@@ -15,11 +16,11 @@ layout: default
 </div>
 
 <div class="post-nav">
-  {% if page.previous.url %}
-    <a class="post-prev" id="post-prev" href="{{ page.previous.url }}"><span class="arrow">&lt;--</span><br><span>ctrl&#8592;</span></a>
+  {% if page.next_in_category != nil %}
+	  <a class="post-prev" id="post-prev" href="{{page.next_in_category.url}}"><span class="arrow">&lt;--</span><br><span>ctrl&#8592;</span></a>
   {% endif %}
   
-  {% if page.next.url %}
-    <a class="post-next" id="post-next" href="{{ page.next.url }}"><span class="arrow">--&gt;</span><br><span>ctrl&#8594;</span></a>
+  {% if page.previous_in_category != nil %}
+	  <a class="post-next" id="post-next" href="{{page.previous_in_category.url}}"><span class="arrow">--&gt;</span><br><span>ctrl&#8594;</span></a>
   {% endif %}
 </div>
