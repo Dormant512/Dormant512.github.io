@@ -1,7 +1,7 @@
 - name: blog
-  link: index.html
+  link: /index.html
 - name: about
-  link: about.html
+  link: /about.html
 - name: vk
   link: "https://vk.com/dormant_art"
 - name: reddit

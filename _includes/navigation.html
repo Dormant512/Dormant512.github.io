@@ -2,19 +2,19 @@
   <ul>
     {% if page.lang == "en" %}
       {% for item in site.data.navigation %}  
-        <li><a href="/{{ item.link }}">~{{ item.name }}~</a></li>
+        <li><a href="{{ item.link }}">~{{ item.name }}~</a></li>
       {% endfor %}
     {% endif %}
 
     {% if page.lang == "ru" %}
       {% for item in site.data.navigation_ru %}  
-        <li><a href="/ru/{{ item.link }}">~{{ item.name }}~</a></li>
+        <li><a href="{{ item.link }}">~{{ item.name }}~</a></li>
       {% endfor %}
     {% endif %}
 
     {% if page.lang == "de" %}
       {% for item in site.data.navigation_de %}  
-        <li><a href="/de/{{ item.link }}">~{{ item.name }}~</a></li>
+        <li><a href="{{ item.link }}">~{{ item.name }}~</a></li>
       {% endfor %}
     {% endif %}
   </ul>

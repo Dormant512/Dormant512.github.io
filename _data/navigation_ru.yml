@@ -1,7 +1,7 @@
 - name: блог
-  link: index.html
+  link: /ru/index.html
 - name: обо мне
-  link: about.html
+  link: /ru/about.html
 - name: vk
   link: "https://vk.com/dormant_art"
 - name: reddit
