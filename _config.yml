@@ -18,12 +18,12 @@ defaults:
       lang: en
       base-url: "/"
   - scope:
-      path: "ru"
+      path: "ru/"
     values:
       lang: ru
       base-url: "/ru/"
   - scope:
-      path: "de"
+      path: "de/"
     values:
       lang: de
       base-url: "/de/"
