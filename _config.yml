@@ -18,29 +18,29 @@ defaults:
       lang: en
       base-url: "/"
   - scope:
-      path: "/ru/"
+      path: "./ru/"
     values:
       lang: ru
       base-url: "/ru/"
   - scope:
-      path: "/de/"
+      path: "./de/"
     values:
       lang: de
       base-url: "/de/"
   - scope:
-      path: "/_posts/en/"
+      path: "./_posts/en/"
       type: "posts"
     values:
       lang: en
       base-url: "/en/"
   - scope:
-      path: "/_posts/ru/"
+      path: "./_posts/ru/"
       type: "posts"
     values:
       lang: ru
       base-url: "/ru/"
   - scope:
-      path: "/_posts/de/"
+      path: "./_posts/de/"
       type: "posts"
     values:
       lang: de
