@@ -1,18 +1,18 @@
 <div class="navigation">
   <ul>
-    {% if page.lang == "en" %}
+    {% if page.lang == "en" or page.categories == "en" %}
       {% for item in site.data.navigation %}  
         <li><a href="{{ item.link }}">~{{ item.name }}~</a></li>
       {% endfor %}
     {% endif %}
 
-    {% if page.lang == "ru" %}
+    {% if page.lang == "ru" or page.categories == "ru" %}
       {% for item in site.data.navigation_ru %}  
         <li><a href="{{ item.link }}">~{{ item.name }}~</a></li>
       {% endfor %}
     {% endif %}
 
-    {% if page.lang == "de" %}
+    {% if page.lang == "de" or page.categories == "de" %}
       {% for item in site.data.navigation_de %}  
         <li><a href="{{ item.link }}">~{{ item.name }}~</a></li>
       {% endfor %}
