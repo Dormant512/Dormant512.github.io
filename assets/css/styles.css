@@ -1,3 +1,7 @@
+@font-face {
+  font-family: Aileron;
+  src: url("../fonts/aileron/Aileron-Regular.otf") format("opentype");
+}
 
 body {
   box-sizing: border-box;
@@ -14,7 +18,33 @@ a {
 }
 
 a:hover {
-  color: black;
+  color: brown;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: normal;
+  font-family: "Aileron", Arial, Helvetica, sans-serif;
+  font-size: 2em;
+  text-transform: uppercase;
+  margin-top: 2em;
+}
+
+h3,
+h4 {
+  font-size: 1.2em;
+  text-indent: 1.2em;
+  font-style: italic;
+}
+
+.about hr {
+  margin-top: 2em;
+}
+
+.about a {
+  font-style: italic;
 }
 
 .def-header,
@@ -24,6 +54,9 @@ a:hover {
   vertical-align: top;
   z-index: 10;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  /* background: rgb(119,53,34);
+  background: linear-gradient(90deg, rgba(119,53,34,1) 0%, rgba(20,115,114,1) 100%); */
+  background-color: rgb(32, 32, 32);
 }
 
 .navigation {
@@ -33,11 +66,6 @@ a:hover {
 .def-header {
   position: fixed;
   top: 0;
-  background: url(../images/bkg.png) no-repeat 50% 90%;
-}
-
-.def-footer {
-  background: url(../images/bkg.png) no-repeat 50% 5%;
 }
 
 .centering {
@@ -145,6 +173,23 @@ a:hover {
   text-align: right;
   min-height: 18rem;
   background-color: antiquewhite;
+}
+
+.pet-projects {
+  padding: 1rem;
+  margin: 1rem auto;
+}
+
+.pet-projects .project {
+  margin: 2rem;
+  padding: 2rem;
+  filter: none;
+  box-shadow: 0 3px 10px rgb(0, 0, 0, 0.2);
+  border-radius: 0.5rem;
+}
+
+.pet-projects .project h3 {
+  margin: 0;
 }
 
 .def-content h1.main-title {
@@ -255,7 +300,7 @@ a:hover {
   }
 }
 
-@media screen and (max-width: 1110px) {
+@media screen and (max-width: 1130px) {
   .def-header .navigation {
     display: none;
   }
@@ -332,13 +377,10 @@ a:hover {
     grid-gap: 2rem;
     margin: 0 auto;
   }
-  
-  .centering {
-    width: 65%;
-  }
 
   .big-name {
     position: relative;
+    left: 1.5rem;
     font-size: 2.5rem;
   }
 }
@@ -346,16 +388,31 @@ a:hover {
 @media screen and (max-width: 450px) {
   .big-name {
     position: relative;
-    left: 2rem;
+    left: 2.5rem;
     font-size: 1.8rem;
+  }
+
+  .pet-projects .project {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    word-break: break-word;
+  }
+
+  .post-card {
+    word-break: break-word;
   }
 }
 
 @media screen and (max-width: 330px) {
   .big-name {
     position: relative;
-    left: 2rem;
+    left: 3rem;
     font-size: 1.5rem;
+  }
+
+  .pet-projects .project {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
   }
 }
 
@@ -364,5 +421,9 @@ a:hover {
     position: relative;
     left: 1.2rem;
     font-size: 1.2rem;
+  }
+
+  .pet-projects .project {
+    margin: 2rem 0;
   }
 }

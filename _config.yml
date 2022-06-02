@@ -15,17 +15,24 @@ defaults:
       path: ""
     values:
       layout: "default"
-      lang: en
       base-url: "/"
+  - scope:
+      path: "index.html"
+    values:
+      lang: "en"
+  - scope:
+      path: "about.html"
+    values:
+      lang: "en"
   - scope:
       path: "ru"
     values:
-      lang: ru
+      lang: "ru"
       base-url: "/ru/"
   - scope:
       path: "de"
     values:
-      lang: de
+      lang: "de"
       base-url: "/de/"
       
 plugins:

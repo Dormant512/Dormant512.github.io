@@ -1,24 +1,22 @@
 <div class="navigation">
-  <ul>
-    {% if page.lang == "en" %}
-      {% for item in site.data.navigation %}  
-        <li><a href="{{ item.link }}">~{{ item.name }}~</a></li>
-      {% endfor %}
-    {% endif %}
+  <ul>      
 
-    {% if page.lang == "ru" %}
+    {% if page.url contains "/ru/" %}
       {% for item in site.data.navigation_ru %}  
         <li><a href="{{ item.link }}">~{{ item.name }}~</a></li>
       {% endfor %}
-    {% endif %}
-
-    {% if page.lang == "de" %}
+    {% elsif page.url contains "/de/" %}
       {% for item in site.data.navigation_de %}  
+        <li><a href="{{ item.link }}">~{{ item.name }}~</a></li>
+      {% endfor %}
+    {% else %}
+      {% for item in site.data.navigation %}  
         <li><a href="{{ item.link }}">~{{ item.name }}~</a></li>
       {% endfor %}
     {% endif %}
 
     <li><a href="https://vk.com/dormant_art">~vk~</a></li>
     <li><a href="https://www.reddit.com/user/dm_DormanT">~reddit~</a></li>
+    <li><a href="https://github.com/Dormant512">~github~</a></li>
   </ul>
 </div>
