@@ -3,11 +3,18 @@
   src: url("../fonts/aileron/Aileron-Regular.otf") format("opentype");
 }
 
+@font-face {
+  font-family: "Open Sans Light";
+  font-style: normal;
+  font-weight: 300;
+  src: url("https://fonts.gstatic.com/s/opensans/v13/DXI1ORHCpsQm3Vp6mXoaTRa1RVmPjeKy21_GQJaLlJI.woff") format("woff");
+}
+
 body {
   box-sizing: border-box;
   margin: 0;
   /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
-  font-family: 'Roboto', Tahoma, sans-serif;
+  font-family: "Open Sans Light", Tahoma, sans-serif;
   font-size: 20px;
   height: 100vh;
 }
