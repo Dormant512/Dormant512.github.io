@@ -4,11 +4,19 @@
 }
 
 @font-face {
-  font-family: "Open Sans Light";
-  font-style: normal;
-  font-weight: 300;
-  src: url("https://fonts.gstatic.com/s/opensans/v13/DXI1ORHCpsQm3Vp6mXoaTRa1RVmPjeKy21_GQJaLlJI.woff") format("woff");
+  font-family: Unisans-heavy;
+  src: url("../fonts/unisans/Uni\ Sans\ Heavy.otf") format("opentype");
 }
+
+@font-face {
+  font-family: Unisans-light;
+  src: url("../fonts/unisans/Uni\ Sans\ Thin.otf") format("opentype");
+}
+
+/* white F5F3E8
+tan B7B0AB
+mustard C5A574
+darkgray 363636 */
 
 body {
   box-sizing: border-box;
@@ -33,7 +41,7 @@ h2,
 h3,
 h4 {
   font-weight: normal;
-  font-family: "Aileron", Arial, Helvetica, sans-serif;
+  font-family: "Unisans-heavy", Arial, Helvetica, sans-serif;
   font-size: 2em;
   text-transform: uppercase;
   margin-top: 2em;
@@ -42,8 +50,8 @@ h4 {
 h3,
 h4 {
   font-size: 1.2em;
-  text-indent: 1.2em;
   font-style: italic;
+  margin-bottom: 1em;
 }
 
 .about hr {
@@ -60,14 +68,14 @@ h4 {
   height: 6rem;
   vertical-align: top;
   z-index: 10;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: "Unisans-heavy", Arial, Helvetica, sans-serif;
   /* background: rgb(119,53,34);
   background: linear-gradient(90deg, rgba(119,53,34,1) 0%, rgba(20,115,114,1) 100%); */
   background-color: rgb(32, 32, 32);
 }
 
 .navigation {
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: "Unisans-heavy", Arial, Helvetica, sans-serif;
 }
 
 .def-header {
@@ -89,20 +97,21 @@ h4 {
   margin-right: 2rem;
 } */
 
-.big-name {
+.drm-logo {
   display: inline-block;
-  /* width: 30rem; */
-  color: white;
-  font-size: 3rem;
-  font-style: italic;
-  font-weight: bold;
-  line-height: 6rem;
-  margin-right: 2rem;
+  position: relative;
+  top: 1.2rem;
+  width: 15rem;
+  margin-right: 0.1rem;
+}
+
+.def-footer .drm-logo {
+  top: 1.6rem;
 }
 
 .def-header .navigation {
   position: relative;
-  top: -0.3rem;
+  top: 0.5rem;
   display: inline-block;
   height: 3rem;
 }
@@ -290,7 +299,21 @@ h4 {
   opacity: 0.4;
 }
 
-@media screen and (max-width: 1150px) {
+@media screen and (max-width: 1215px) {
+  .def-header,
+  .def-footer {
+    text-align: center;
+  }
+
+  .drm-logo {
+    margin: 0 auto;
+    top: 1.5rem;
+  }
+
+  .def-footer .drm-logo {
+    top: 1.4rem;
+  }
+
   .def-header .language-selector {
     top: -0.4rem;
     right: 5%;
@@ -305,9 +328,7 @@ h4 {
   .def-header .language-selector .slash {
     display: none;
   }
-}
 
-@media screen and (max-width: 1130px) {
   .def-header .navigation {
     display: none;
   }
@@ -384,19 +405,17 @@ h4 {
     grid-gap: 2rem;
     margin: 0 auto;
   }
-
-  .big-name {
-    position: relative;
-    left: 1.5rem;
-    font-size: 2.5rem;
-  }
 }
 
 @media screen and (max-width: 450px) {
-  .big-name {
-    position: relative;
-    left: 2.5rem;
-    font-size: 1.8rem;
+  .def-header .drm-logo,
+  .def-footer .drm-logo {
+    width: 10rem;
+    top: 1.9rem;
+  }
+
+  .def-footer .drm-logo {
+    top: 2rem;
   }
 
   .pet-projects .project {
@@ -411,12 +430,6 @@ h4 {
 }
 
 @media screen and (max-width: 330px) {
-  .big-name {
-    position: relative;
-    left: 3rem;
-    font-size: 1.5rem;
-  }
-
   .pet-projects .project {
     margin-left: 0.5rem;
     margin-right: 0.5rem;
@@ -424,12 +437,6 @@ h4 {
 }
 
 @media screen and (max-width: 290px) {
-  .big-name {
-    position: relative;
-    left: 1.2rem;
-    font-size: 1.2rem;
-  }
-
   .pet-projects .project {
     margin: 2rem 0;
   }
