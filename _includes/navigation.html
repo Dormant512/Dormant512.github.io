@@ -1,6 +1,8 @@
 <div class="navigation">
   <ul>      
 
+    <!-- <span style="color:white;">{{ page.title }}</span> -->
+
     {% if page.url contains "/ru/" %}
       {% for item in site.data.navigation_ru %}  
         <li><a href="{{ item.link }}">~{{ item.name }}~</a></li>

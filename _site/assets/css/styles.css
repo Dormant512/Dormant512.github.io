@@ -13,27 +13,28 @@
   src: url("../fonts/unisans/Uni\ Sans\ Thin.otf") format("opentype");
 }
 
-/* white F5F3E8
-tan B7B0AB
-mustard C5A574
-darkgray 363636 */
+/* 
+white #F5F3E8
+tan #B7B0AB
+mustard #C5A574
+darkgray rgb(32, 32, 32) */
 
 body {
   box-sizing: border-box;
   margin: 0;
-  /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
-  font-family: 'Roboto', Tahoma, sans-serif;
+  font-family: "Aileron", Tahoma, sans-serif;
   font-size: 20px;
   height: 100vh;
+  color: rgb(32, 32, 32);
 }
 
 a {
   text-decoration: none;
-  color: black;
+  color: rgb(32, 32, 32);
 }
 
 a:hover {
-  color: brown;
+  color: #C5A574;
 }
 
 h1,
@@ -87,22 +88,15 @@ h4 {
   width: 85%;
   margin: 0 auto;
   vertical-align: top;
-  /* outline: 2px solid black; */
 }
-
-/* .def-header>div>div,
-.def-footer>div>div {
-  display: inline-block;
-  outline: 1px solid black;
-  margin-right: 2rem;
-} */
 
 .drm-logo {
   display: inline-block;
   position: relative;
-  top: 1.2rem;
+  top: 1.3rem;
+  /* left: -1rem; */
   width: 15rem;
-  margin-right: 0.1rem;
+  margin-right: 0;
 }
 
 .def-footer .drm-logo {
@@ -126,10 +120,14 @@ h4 {
 }
 
 .def-header .navigation li a {
-  color: white;
+  color: #F5F3E8;
   font-size: 2rem;
   line-height: 3rem;
 }
+
+/* .navigation li.active {
+  color: #C5A574;
+} */
 
 /* .def-footer .social-logos {
   position: relative;
@@ -157,7 +155,7 @@ h4 {
 }
 
 .def-header .language-selector a {
-  color: white;
+  color: #F5F3E8;
 }
 
 .def-content {
@@ -178,17 +176,15 @@ h4 {
   grid-auto-rows: auto;
   grid-gap: 2rem;
   margin: 0 auto;
-  /* outline: 1px solid black; */
 }
 
 .post-card {
-  /* outline: 1px solid black; */
   position: relative;
-  /* min-width: 360px; */
   padding: 1rem;
   text-align: right;
   min-height: 18rem;
-  background-color: antiquewhite;
+  background-color: #B7B0AB;
+  outline: 1px solid black;
 }
 
 .pet-projects {
@@ -231,7 +227,7 @@ h4 {
 }
 
 .post-card hr {
-  border: 1px solid black;
+  border: 1px solid rgb(32, 32, 32);
 }
 
 .post-inner img {
@@ -239,19 +235,19 @@ h4 {
 }
 
 .post-card.light {
-  color: black;
+  color: rgb(32, 32, 32);
 }
 
 .post-card.light hr {
-  border: 1px solid black;
+  border: 1px solid rgb(32, 32, 32);
 }
 
 .post-card.dark {
-  color: white;
+  color: #F5F3E8;
 }
 
 .post-card.dark hr {
-  border: 1px solid white;
+  border: 1px solid #F5F3E8;
 }
 
 .def-header .mobile-menu {
@@ -292,14 +288,14 @@ h4 {
 }
 
 .pagination .current-paginator-page {
-  color: lightsalmon;
+  color: #C5A574;
 }
 
 .disabled {
   opacity: 0.4;
 }
 
-@media screen and (max-width: 1215px) {
+@media screen and (max-width: 1240px) {
   .def-header,
   .def-footer {
     text-align: center;
